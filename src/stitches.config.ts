@@ -1,0 +1,103 @@
+import { createStitches, defaultThemeMap } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
+import { font } from './styles/fonts';
+
+export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme, config } =
+  createStitches({
+    themeMap: {
+      ...defaultThemeMap,
+      width: 'space',
+      minWidth: 'space',
+      maxWidth: 'space',
+      height: 'space',
+      minHeight: 'space',
+      maxHeight: 'space',
+    },
+    media: {
+      mobile: '(min-width: 640px)',
+      tablet: '(min-width: 768px)',
+      desktop: '(min-width: 1024px)',
+    },
+    theme: {
+      colors: {
+        primary700: '#004851',
+        primary500: '#007681',
+        secondary200: '#00DCC0',
+        secondary400: '#01CAB0',
+        success: '#4BAE4F',
+        error: '#CB464A',
+        black: '#000000',
+        white: '#FFFFFF',
+        gray100: '#F2F2F2',
+        gray200: '#D9D9D9',
+        blue100: '#F2FDFF',
+        blue200: '#D1EBF0',
+      },
+      space: {
+        0: '0',
+        1: '0.25rem',
+        2: '0.5rem',
+        3: '0.75rem',
+        4: '1rem',
+        5: '1.25rem',
+        6: '1.5rem',
+        7: '1.75rem',
+        8: '2rem',
+        9: '2.25rem',
+        10: '2.5rem',
+        11: '2.75rem',
+        12: '3rem',
+        14: '3.5rem',
+        16: '4rem',
+        20: '5rem',
+        24: '6rem',
+        28: '7rem',
+        32: '8rem',
+        36: '9rem',
+        40: '10rem',
+        44: '11rem',
+        48: '12rem',
+        52: '13rem',
+        56: '14rem',
+        60: '15rem',
+        64: '16rem',
+        72: '18rem',
+        80: '20rem',
+        96: '24rem',
+      },
+      fontSizes: {
+        sm: '0.875rem',
+        md: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '2rem',
+        '4xl': '3rem',
+        '5xl': '4.5rem',
+      },
+      fontWeights: {
+        light: '300',
+        normal: '400',
+        semibold: '600',
+        bold: '700',
+      },
+      radii: {
+        sm: '6px',
+        md: '10px',
+        lg: '16px',
+        xl: '20px',
+        full: '9999px',
+      },
+      fonts: {
+        default: font.style.fontFamily,
+      },
+      shadows: {
+        sm: '0 1px 4px 0 rgb(0 0 0 / 0.1), 0 1px 3px -1px rgb(0 0 0 / 0.1)',
+        md: '0 2px 8px 0 rgb(0 0 0 / 0.1), 0 2px 6px -1px rgb(0 0 0 / 0.1)',
+        lg: '0 6px 15px 0 rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1)',
+        xl: '0 10px 25px 0 rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1)',
+      },
+    },
+  });
+
+export type CSS = Stitches.CSS<typeof config>;
